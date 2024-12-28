@@ -1,0 +1,17 @@
+syntax = "proto3";
+package mylayer.mylayer;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "mylayer/mylayer/params.proto";
+
+option go_package = "mylayer/x/mylayer/types";
+
+// GenesisState defines the mylayer module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+package mylayer.mylayer;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "mylayer/x/mylayer/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "mylayer/x/mylayer/Params";
+  option (gogoproto.equal) = true;
+
+  
+}
